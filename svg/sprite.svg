@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+    <symbol viewBox="0 0 20 22" id="bell"> 
+        <path d="M11.73 20C11.5542 20.3031 11.3018 20.5547 10.9982 20.7295C10.6946 20.9044 10.3504 20.9965 10 20.9965C9.64962 20.9965 9.30539 20.9044 9.00177 20.7295C8.69816 20.5547 8.44581 20.3031 8.27 20M16 7C16 5.4087 15.3679 3.88258 14.2426 2.75736C13.1174 1.63214 11.5913 1 10 1C8.4087 1 6.88258 1.63214 5.75736 2.75736C4.63214 3.88258 4 5.4087 4 7C4 14 1 16 1 16H19C19 16 16 14 16 7Z"   stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol viewBox="0 0 20 20" id="search">  
+        <path d="M19 19L14.65 14.65M17 9C17 13.4183 13.4183 17 9 17C4.58172 17 1 13.4183 1 9C1 4.58172 4.58172 1 9 1C13.4183 1 17 4.58172 17 9Z"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol viewBox="0 0 19 19" id="user">   
+        <path d="M15.6667 16.25V14.6667C15.6667 13.8268 15.333 13.0214 14.7392 12.4275C14.1453 11.8336 13.3399 11.5 12.5 11.5H6.16667C5.32681 11.5 4.52136 11.8336 3.92749 12.4275C3.33363 13.0214 3 13.8268 3 14.6667V16.25"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M9.33268 8.33333C11.0816 8.33333 12.4993 6.91557 12.4993 5.16667C12.4993 3.41777 11.0816 2 9.33268 2C7.58378 2 6.16602 3.41777 6.16602 5.16667C6.16602 6.91557 7.58378 8.33333 9.33268 8.33333Z"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol viewBox="0 0 19 19" id="smartphone">    
+        <path d="M13.5 1H5.58333C4.70888 1 4 1.70888 4 2.58333V15.25C4 16.1245 4.70888 16.8333 5.58333 16.8333H13.5C14.3745 16.8333 15.0833 16.1245 15.0833 15.25V2.58333C15.0833 1.70888 14.3745 1 13.5 1Z"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M9.54199 14.6667H9.54991"   stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> 
+    </symbol>
+    <symbol viewBox="0 0 19 19" id="mail"> 
+        <path d="M3.16634 3.16675H15.833C16.7038 3.16675 17.4163 3.87925 17.4163 4.75008V14.2501C17.4163 15.1209 16.7038 15.8334 15.833 15.8334H3.16634C2.29551 15.8334 1.58301 15.1209 1.58301 14.2501V4.75008C1.58301 3.87925 2.29551 3.16675 3.16634 3.16675Z"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M17.4163 4.75L9.49968 10.2917L1.58301 4.75"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> 
+    </symbol>
+    <symbol viewBox="0 0 17 21" id="marker">  
+        <path d="M15.625 8.91675C15.625 14.4584 8.5 19.2084 8.5 19.2084C8.5 19.2084 1.375 14.4584 1.375 8.91675C1.375 7.02708 2.12567 5.21481 3.46186 3.87861C4.79806 2.54242 6.61033 1.79175 8.5 1.79175C10.3897 1.79175 12.2019 2.54242 13.5381 3.87861C14.8743 5.21481 15.625 7.02708 15.625 8.91675Z"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M8.5 11.2917C9.81168 11.2917 10.875 10.2284 10.875 8.91675C10.875 7.60507 9.81168 6.54175 8.5 6.54175C7.18832 6.54175 6.125 7.60507 6.125 8.91675C6.125 10.2284 7.18832 11.2917 8.5 11.2917Z"   stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> 
+    </symbol>
+</svg>
