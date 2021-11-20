@@ -1,11 +1,25 @@
-const   tableTabs = document.querySelectorAll('.return__item'),
-        tables = document.querySelectorAll('.table'),
-        screenMore = document.querySelector('.details__user'),
-        seeMore = document.querySelector('.details__history-link'),
-        historyCommit = document.querySelector('.details__history-events');
-
+const tableTabs = document.querySelectorAll('.return__item'),
+    tables = document.querySelectorAll('.table'),
+    screenMore = document.querySelector('.details__user'),
+    seeMore = document.querySelector('.details__history-link'),
+    historyCommit = document.querySelector('.details__history-events'),
+    sideBarBtn = document.querySelector('.side-bar__btn'),
+    sideBar = document.querySelector('.return__aside'),
+    closeSideBar = document.querySelector('.over__box'),
+    body = document.querySelector('.return__body');
+    
+sideBarBtn.addEventListener('click', () => {
+    sideBar.classList.toggle('active'); 
+    body.style.overflow ="hidden"
+});
+closeSideBar.addEventListener('click', (e) => {
+     if(e.target == closeSideBar){
+        sideBar.classList.remove('active'); 
+        body.style.overflow ="visible"
+     }
+ })
 tableTabs.forEach(tab => {
-    tab.addEventListener('click', ()=> {
+    tab.addEventListener('click', () => {
         tableTabs.forEach(el => {
             el.classList.remove('active')
         });
@@ -17,31 +31,34 @@ tableTabs.forEach(tab => {
     })
 })
 
-for(let key of historyCommit.children) {
+for (let key of historyCommit.children) {
     key.style.display = "none"
 }
-for(let i = 0; i < 5 ; i++) {
-    historyCommit.children[i].style.display = "block"
-}  
+for (let i = 0; i < 5; i++) {
+    historyCommit.children[i].style.display = "flex"
+}
 
-seeMore.addEventListener('click', ()=> {
+seeMore.addEventListener('click', () => {
     screenMore.classList.toggle('active');
     console.log(screenMore.classList.contains('active'));
-    if(screenMore.classList.contains('active')){
-        for(let key of historyCommit.children) {
-            key.style.display = "block"
+    if (screenMore.classList.contains('active')) {
+        for (let key of historyCommit.children) {
+            key.style.display = "flex"
         }
         seeMore.innerHTML = "See less..."
-    }else {
-        for(let key of historyCommit.children) {
+    } else {
+        for (let key of historyCommit.children) {
             key.style.display = "none"
         }
-        for(let i = 0; i < 5 ; i++) {
-            historyCommit.children[i].style.display = "block"
-        } 
-        seeMore.innerHTML = "See all..."}
+        for (let i = 0; i < 5; i++) {
+            historyCommit.children[i].style.display = "flex"
+        }
+        seeMore.innerHTML = "See all..."
+    }
 
 })
+
+
 // const   goods = [
 //     {   
 //         id: "RA-1234",
@@ -96,4 +113,3 @@ seeMore.addEventListener('click', ()=> {
 //         metod: "cash"
 //     }
 // ] 
- 
