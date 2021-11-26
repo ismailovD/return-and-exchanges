@@ -6,7 +6,9 @@ const tableTabs = document.querySelectorAll('.return__item'),
     sideBarBtn = document.querySelector('.side-bar__btn'),
     sideBar = document.querySelector('.return__aside'),
     closeSideBar = document.querySelector('.over__box'),
-    body = document.querySelector('.return__body');
+    body = document.querySelector('.return__body'),
+    warningMsg = document.querySelector('.warning'),
+    warningClose = document.querySelector('.warning__close');
     
 sideBarBtn.addEventListener('click', () => {
     sideBar.classList.toggle('active'); 
@@ -58,58 +60,7 @@ seeMore.addEventListener('click', () => {
 
 })
 
-
-// const   goods = [
-//     {   
-//         id: "RA-1234",
-//         requested: "4 Oct, 2021",
-//         type: "Return",
-//         reason: "Don't like",
-//         image: "1.jpg",
-//         state: "pending",
-//         amount: -123,
-//         size: "L", 
-//         cost: 54,
-//         pickup: 6,
-//         metod: "credit"
-//     },
-//     {   
-//         id: "RA-2345",
-//         requested: "4 Oct, 2021",
-//         type: "Exchange",
-//         reason: "Don't like",
-//         image: "2.jpg",
-//         state: "process",
-//         amount: -123,
-//         size: "M", 
-//         cost: 54,
-//         pickup: 6,
-//         metod: "cash"
-//     },
-//     {   
-//         id: "RA-3456",
-//         requested: "4 Oct, 2021",
-//         type: "Return",
-//         reason: "Don't like",
-//         image: "3.jpg",
-//         state: "Closed",
-//         amount: 0,
-//         size: "X L", 
-//         cost: 54,
-//         pickup: 6,
-//         metod: "credit"
-//     },
-//     {   
-//         id: "RA-4567",
-//         requested: "4 Oct, 2021",
-//         type: "Exchange",
-//         reason: "Don't like",
-//         image: "4.jpg",
-//         state: "Overdue",
-//         amount: -123,
-//         size: "XXL", 
-//         cost: 54,
-//         pickup: 6,
-//         metod: "cash"
-//     }
-// ] 
+warningClose.addEventListener('click', () => {
+    warningMsg.classList.add('hide');
+    setTimeout(() => {warningMsg.classList.add('close')},400)
+})
