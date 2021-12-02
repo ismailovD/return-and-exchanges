@@ -668,9 +668,16 @@ body {
     border: 1px solid var(--blue);
     -webkit-box-flex: 1;
     -ms-flex-positive: 1;
-    flex-grow: 1
+    flex-grow: 1;
+    cursor: pointer;
 }
-
+.details__btn:disabled {
+    background: var(--dark-purple-opacity);
+}
+.details__btn:disabled:hover { 
+    background: var(--dark-purple-opacity);
+    color: var(--blue);
+} 
 .details__btn:not(:last-child) {
     margin-right: 6px
 }
