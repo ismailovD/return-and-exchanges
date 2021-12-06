@@ -1,11 +1,11 @@
 const   sideBarBtn = document.querySelector('.side-bar__btn'),
         sideBar = document.querySelector('.side-bar'), 
-        pageContent = document.querySelector('.global__content'), 
+        pageContent =document.querySelector('.global__content'), 
         dropdownWindow = document.querySelector('.side-bar__dropdown'),
         dropdownBtn = document.querySelector('.side-bar__dropdown-btn'), 
-        tabList = document.querySelector('.return__list'),
         tableTabs = document.querySelectorAll('.return__item'),
-        tables = document.querySelectorAll('.table'), 
+        tables = document.querySelectorAll('.table'),
+        detailsContent = document.querySelector('.details'),
         screenMore = document.querySelector('.details__user'),
         seeMore = document.querySelector('.details__history-link'),
         historyCommit = document.querySelector('.details__history-events'),   
@@ -16,11 +16,13 @@ sideBarBtn.addEventListener('click', () => {
     sideBar.classList.toggle('active'); 
         if(sideBar.classList.contains('active')){  
             pageContent.style.marginLeft = "275px"; 
-            tabList.classList.add("direction-column")
+            detailsContent.classList.add('change'); 
+            someHistory();
     }else {  
         dropdownWindow.classList.remove('active')
         pageContent.style.marginLeft = "65px";  
-        tabList.classList.remove("direction-column")
+        detailsContent.classList.remove('change')
+        allHistory()
     }
 }); 
 dropdownBtn.addEventListener('click', () => {
@@ -42,4 +44,40 @@ tableTabs.forEach(tab => {
     })
 })
 
+function someHistory() {
+    for (let key of historyCommit.children) {
+        key.style.display = "none"
+    }
+    for (let i = 0; i < 5; i++) {
+        historyCommit.children[i].style.display = "flex"
+    }
+}
+someHistory()
+
+
+function allHistory() {
+    for (let key of historyCommit.children) {
+        key.style.display = "flex"
+    }
+}
+seeMore.addEventListener('click', () => {
+    screenMore.classList.toggle('active'); 
+    if (screenMore.classList.contains('active')) {
+        allHistory()
+        seeMore.innerHTML = "See less..."
+    } else {
+        for (let key of historyCommit.children) {
+            key.style.display = "none"
+        }
+        for (let i = 0; i < 5; i++) {
+            historyCommit.children[i].style.display = "flex"
+        }
+        seeMore.innerHTML = "See all..."
+    }
+
+})
  
+warningClose.addEventListener('click', () => {
+    warningMsg.classList.add('hide');
+    setTimeout(() => {warningMsg.classList.add('close')},400)
+})
