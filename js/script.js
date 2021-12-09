@@ -1,8 +1,12 @@
 const   sideBarBtn = document.querySelector('.side-bar__btn'),
         sideBar = document.querySelector('.side-bar'), 
         pageContent = document.querySelector('.global__content'), 
-        dropdownWindow = document.querySelector('.side-bar__dropdown'),
-        dropdownBtn = document.querySelector('.side-bar__dropdown-btn'), 
+        visitedPage = document.querySelectorAll('.global-item'),
+        userDropdown = document.querySelector('.global__auth'),
+        userBtn = document.querySelector('.user__dropdown-btn'),
+        sideBarSet = '.side-bar__settings',
+        dropdownList = document.querySelector('.side-bar__settings'),
+        dropdownBtn = document.querySelector('.side-bar__dropdown'), 
         tabList = document.querySelector('.return__list'),
         tableTabs = document.querySelectorAll('.return__item'),
         tables = document.querySelectorAll('.table'), 
@@ -18,16 +22,35 @@ sideBarBtn.addEventListener('click', () => {
             pageContent.style.marginLeft = "275px"; 
             tabList.classList.add("direction-column")
     }else {  
-        dropdownWindow.classList.remove('active')
+        dropdownList.classList.remove('active')
         pageContent.style.marginLeft = "65px";  
         tabList.classList.remove("direction-column")
     }
 }); 
 dropdownBtn.addEventListener('click', () => {
-    dropdownWindow.classList.toggle('active'); 
-    if(dropdownWindow.classList.contains('active')){
+    dropdownList.classList.toggle('active'); 
+    if(dropdownList.classList.contains('active')){
         sideBar.classList.add('change-height')
     }else sideBar.classList.remove('change-height')
+})
+
+userBtn.addEventListener('click', () => {
+    userDropdown.classList.toggle('open')
+});
+
+visitedPage.forEach(item => {
+    item.addEventListener('click', ()=> {
+        visitedPage.forEach(elem => {
+            elem.classList.remove('visited')
+            if(elem.closest(sideBarSet)){
+                elem.closest(sideBarSet).classList.remove('visited')
+            }
+        })
+        if(item.closest(sideBarSet)){ 
+            item.closest(sideBarSet).classList.add('visited')
+        }
+        item.classList.add('visited')
+    })
 })
 tableTabs.forEach(tab => {
     tab.addEventListener('click', () => {
