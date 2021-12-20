@@ -168,37 +168,42 @@ detailBtns.forEach(button => {
     button.addEventListener('click', () => { 
         button.classList.add('active');
         popUpBg.classList.add('show');
+        setTimeout(() => {popUpBg.classList.add('change-bg');} , 200)
         let btnId = button.getAttribute('data-id'); 
         document.querySelector('#'+ btnId).classList.add('active');
-        body.style.overflow = 'hidden'
+        setTimeout(() => {document.querySelector('#'+ btnId).classList.add('visible')} , 200)
+        // body.style.overflow = 'hidden'
     })
 })
 
 popUpClose.forEach(closeBtn => {
     closeBtn.addEventListener('click', () => {
         popUpBlock.forEach(block => {
-            block.classList.remove('active')
+            block.classList.remove('visible')
+            setTimeout(() => {block.classList.remove('active')} , 200)
         })
         detailBtns.forEach(btns => {
             btns.classList.remove('active')
         })
-        popUpBg.classList.remove('show');
+        // popUpBg.classList.remove('show');
+        setTimeout(() => {popUpBg.classList.remove('change-bg')} , 100)
+        setTimeout(() => {popUpBg.classList.remove('show')} , 300)
         body.style.overflow = 'visible'
     })
 })
 
-popUpBg.addEventListener('click', (e) => {
-    if(e.target === popUpBg ) { 
-        popUpBlock.forEach(block => {
-            block.classList.remove('active')
-        })
-        detailBtns.forEach(btns => {
-            btns.classList.remove('active')
-        })
-        popUpBg.classList.remove('show');
-        body.style.overflow = 'visible'
-    }
-})
+// popUpBg.addEventListener('click', (e) => {
+//     if(e.target === popUpBg ) { 
+//         popUpBlock.forEach(block => {
+//             block.classList.remove('active')
+//         })
+//         detailBtns.forEach(btns => {
+//             btns.classList.remove('active')
+//         })
+//         popUpBg.classList.remove('show');
+//         body.style.overflow = 'visible'
+//     }
+// })
 
 popUpCheck.forEach(inp => {
     inp.addEventListener('change', () => {
