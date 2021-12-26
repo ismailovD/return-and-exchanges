@@ -14,7 +14,23 @@ const   sideBarBtn = document.querySelector('.side-bar__btn'),
         seeMore = document.querySelector('.details__history-link'),
         historyCommit = document.querySelector('.details__history-events'),   
         warningMsg = document.querySelector('.warning'),
-        warningClose = document.querySelector('.warning__close');
+        warningClose = document.querySelector('.warning__close'),
+        globalSearch = document.querySelector('.global__search-input'),
+        globalSearchDropdown = document.querySelector('.global__search-dropdown');
+        
+globalSearch.addEventListener('input', () => { 
+    if(globalSearch.value.length > 0){
+        globalSearchDropdown.classList.add('active');
+        setTimeout(()=> {
+            globalSearchDropdown.classList.add('show');
+        }, 100)
+    }else {
+        globalSearchDropdown.classList.remove('show');
+        setTimeout(()=> {
+            globalSearchDropdown.classList.remove('active');
+        }, 100)
+    }
+}) 
     
 sideBarBtn.addEventListener('click', () => {
     sideBar.classList.toggle('active'); 
